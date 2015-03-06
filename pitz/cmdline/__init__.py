@@ -535,8 +535,8 @@ def pitz_shell():
     ns['send_through_pager'] = clepy.send_through_pager
     ns['edit_with_editor'] = clepy.edit_with_editor
 
-    from IPython.Shell import IPShellEmbed
-    s = IPShellEmbed(['-colors', 'Linux'])
+    from IPython.terminal.embed import InteractiveShellEmbed
+    s = InteractiveShellEmbed()
     s(local_ns=ns)
 
     # This stuff happens when you close the IPython session.
